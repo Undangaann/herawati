@@ -2,11 +2,11 @@ const WEDDING_CONFIG = {
     couple: {
         groom: {
             name: "Andi Agung Pratama Putra",
-            nickname: "Adit",
+            nickname: "Agung",
             father: "Bapak Andi Muhtar",
             mother: "Ibu Jamila",
             instagram: "https://instagram.com",
-            instagramUsername: "@adityapratama",
+            instagramUsername: "@agung.pratama938",
             photo: "assets/images/groom.jpg"
         },
         bride: {
@@ -81,7 +81,7 @@ const WEDDING_CONFIG = {
 
         bank2: {
             bank: "BRI",
-            accountNumber: "3818 0102 3768 536",
+            accountNumber: "381801023768536",
             accountName: "Andi agung pratama putra"
         },
 
