@@ -46,7 +46,7 @@ function initConfiguration() {
     document.getElementById("bride-ig").innerHTML = `<i class="fa-brands fa-instagram"></i> ${WEDDING_CONFIG.couple.bride.instagramUsername}`;
 
     // Photos
-    document.querySelector(".cover-bg").style.backgroundImage = `url('${WEDDING_CONFIG.couple.groom.photo}')`; // atau cover foto
+    //document.querySelector(".cover-bg").style.backgroundImage = `url('${WEDDING_CONFIG.couple.groom.photo}')`; // atau cover foto
     document.querySelectorAll(".closing-photo img")[0].src = WEDDING_CONFIG.couple.groom.photo;
 
     // Event Akad & Resepsi
