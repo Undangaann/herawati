@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wedding of Aditya & Alya</title>
+    <meta name="description" content="Undangan Pernikahan Aditya & Alya - 12 Desember 2026">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="The Wedding of Aditya & Alya">
+    <meta property="og:description" content="Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir.">
+    <meta property="og:image" content="assets/images/cover.jpg">
+    <meta property="og:url" content="">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Utama -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- 1. COVER SECTION -->
+    <section id="cover" class="cover-section">
+        <div class="cover-bg" style="background-image: url('assets/images/cover.jpg');"></div>
+        <div class="cover-overlay"></div>
+        <div class="cover-content container fade-up">
+            <p class="subtitle">THE WEDDING OF</p>
+            <h1 class="couple-names"><span class="groom-name">Aditya</span> & <span class="bride-name">Alya</span></h1>
+            <p class="wedding-date">12 Desember 2026</p>
+            
+            <div class="guest-box">
+                <p>Kepada Yth. Bapak/Ibu/Saudara/i</p>
+                <h3 id="guest-name">Bapak/Ibu/Saudara/i</h3>
+            </div>
+
+            <button id="open-invitation-btn" class="btn-primary">
+                <i class="fa-solid fa-envelope-open"></i> Buka Undangan
+            </button>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT WRAPPER (Hidden until opened) -->
+    <div id="main-content" class="hidden">
+
+        <!-- NAVIGATION -->
+        <nav class="bottom-nav">
+            <a href="#cover" class="nav-item active"><i class="fa-solid fa-home"></i><span>Home</span></a>
+            <a href="#couple" class="nav-item"><i class="fa-solid fa-heart"></i><span>Couple</span></a>
+            <a href="#event" class="nav-item"><i class="fa-solid fa-calendar-days"></i><span>Event</span></a>
+            <a href="#gallery" class="nav-item"><i class="fa-solid fa-images"></i><span>Gallery</span></a>
+            <a href="#rsvp" class="nav-item"><i class="fa-solid fa-envelope"></i><span>RSVP</span></a>
+        </nav>
+
+        <!-- FLOATING MUSIC PLAYER -->
+        <div id="music-player" class="music-player">
+            <button id="music-toggle-btn" aria-label="Toggle Music">
+                <i class="fa-solid fa-compact-disc"></i>
+            </button>
+            <audio id="bg-music" loop>
+                <source src="assets/music/music.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <!-- 2. INTRODUCTION -->
+        <section id="introduction" class="section intro-section text-center">
+            <div class="container fade-up">
+                <h2 class="arabic-text">Assalamu'alaikum Warahmatullahi Wabarakatuh</h2>
+                <p id="intro-text" class="intro-desc">
+                    Tanpa mengurangi rasa hormat, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk hadir dalam acara pernikahan kami.
+                </p>
+            </div>
+        </section>
+
+        <!-- 3. COUPLE SECTION -->
+        <section id="couple" class="section couple-section">
+            <div class="container">
+                <div class="section-title fade-up">
+                    <p class="subtitle">Bahagia Itu Bersamamu</p>
+                    <h2>The Bride & Groom</h2>
+                </div>
+
+                <div class="couple-grid">
+                    <!-- Groom -->
+                    <div class="couple-card fade-up">
+                        <div class="photo-wrapper">
+                            <img src="assets/images/groom.jpg" alt="Aditya Pratama" loading="lazy">
+                        </div>
+                        <h3 class="groom-full-name">Aditya Pratama</h3>
+                        <p class="parent-info">Putra dari<br>Ayah [Nama] & Ibu [Nama]</p>
+                        <a href="#" id="groom-ig" class="ig-link" target="_blank"><i class="fa-brands fa-instagram"></i> @adityapratama</a>
+                    </div>
+
+                    <div class="couple-divider fade-up">&</div>
+
+                    <!-- Bride -->
+                    <div class="couple-card fade-up">
+                        <div class="photo-wrapper">
+                            <img src="assets/images/bride.jpg" alt="Alya Maharani" loading="lazy">
+                        </div>
+                        <h3 class="bride-full-name">Alya Maharani</h3>
+                        <p class="parent-info">Putri dari<br>Ayah [Nama] & Ibu [Nama]</p>
+                        <a href="#" id="bride-ig" class="ig-link" target="_blank"><i class="fa-brands fa-instagram"></i> @alyamaharani</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. COUNTDOWN SECTION -->
+        <section id="countdown" class="section countdown-section text-center">
+            <div class="container fade-up">
+                <h2>Menuju Hari Bahagia</h2>
+                <div class="countdown-grid">
+                    <div class="countdown-box">
+                        <span id="days">00</span>
+                        <span class="label">Days</span>
+                    </div>
+                    <div class="countdown-box">
+                        <span id="hours">00</span>
+                        <span class="label">Hours</span>
+                    </div>
+                    <div class="countdown-box">
+                        <span id="minutes">00</span>
+                        <span class="label">Minutes</span>
+                    </div>
+                    <div class="countdown-box">
+                        <span id="seconds">00</span>
+                        <span class="label">Seconds</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. WEDDING EVENT -->
+        <section id="event" class="section event-section">
+            <div class="container">
+                <div class="section-title fade-up">
+                    <p class="subtitle">Rangkaian Acara</p>
+                    <h2>Wedding Event</h2>
+                </div>
+
+                <div class="event-grid">
+                    <!-- Akad -->
+                    <div class="event-card fade-up">
+                        <h3>AKAD NIKAH</h3>
+                        <div class="event-details">
+                            <p><i class="fa-solid fa-calendar-days"></i> <span id="akad-date">12 Desember 2026</span></p>
+                            <p><i class="fa-solid fa-clock"></i> <span id="akad-time">08:00 - 10:00 WIB</span></p>
+                            <p><i class="fa-solid fa-location-dot"></i> <span id="akad-venue">Gedung Pernikahan Harmoni</span></p>
+                            <p class="address" id="akad-address">Jl. Melati No. 123, Kota Jakarta</p>
+                        </div>
+                        <a href="#" id="akad-maps" class="btn-secondary" target="_blank">Lihat Lokasi</a>
+                    </div>
+
+                    <!-- Resepsi -->
+                    <div class="event-card fade-up">
+                        <h3>RESEPSI</h3>
+                        <div class="event-details">
+                            <p><i class="fa-solid fa-calendar-days"></i> <span id="reception-date">12 Desember 2026</span></p>
+                            <p><i class="fa-solid fa-clock"></i> <span id="reception-time">11:00 - 13:00 WIB</span></p>
+                            <p><i class="fa-solid fa-location-dot"></i> <span id="reception-venue">Gedung Pernikahan Harmoni</span></p>
+                            <p class="address" id="reception-address">Jl. Melati No. 123, Kota Jakarta</p>
+                        </div>
+                        <a href="#" id="reception-maps" class="btn-secondary" target="_blank">Lihat Lokasi</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. LOVE STORY -->
+        <section id="story" class="section story-section">
+            <div class="container">
+                <div class="section-title fade-up">
+                    <p class="subtitle">Kisah Cinta Kami</p>
+                    <h2>Love Story</h2>
+                </div>
+                <div id="timeline-container" class="timeline">
+                    <!-- Render via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. GALLERY -->
+        <section id="gallery" class="section gallery-section">
+            <div class="container">
+                <div class="section-title fade-up">
+                    <p class="subtitle">Momen Kebersamaan</p>
+                    <h2>Our Gallery</h2>
+                </div>
+                <div id="gallery-grid" class="gallery-grid fade-up">
+                    <!-- Render via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- LIGHTBOX MODAL -->
+        <div id="lightbox" class="lightbox">
+            <span class="lightbox-close">&times;</span>
+            <img id="lightbox-img" src="" alt="Zoomed Image">
+            <button class="lightbox-prev" id="lightbox-prev"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="lightbox-next" id="lightbox-next"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+
+        <!-- 8. LOCATION MAPS -->
+        <section id="location" class="section location-section">
+            <div class="container">
+                <div class="section-title fade-up">
+                    <p class="subtitle">Denah Lokasi</p>
+                    <h2>Location Venue</h2>
+                </div>
+                <div class="map-wrapper fade-up">
+                    <iframe id="map-iframe" src="" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="text-center mt-3 fade-up">
+                    <a href="#" id="main-maps-btn" class="btn-primary" target="_blank"><i class="fa-solid fa-map-location-dot"></i> Buka Google Maps</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. RSVP -->
+        <section id="rsvp" class="section rsvp-section">
+            <div class="container">
+                <div class="section-title fade-up">
+                    <p class="subtitle">Konfirmasi Kehadiran</p>
+                    <h2>RSVP</h2>
+                </div>
+                <form id="rsvp-form" class="rsvp-form fade-up">
+                    <div class="form-group">
+                        <label for="rsvp-name">Nama</label>
+                        <input type="text" id="rsvp-name" required placeholder="Nama Anda">
+                    </div>
+                    <div class="form-group">
+                        <label for="rsvp-phone">Nomor WhatsApp</label>
+                        <input type="tel" id="rsvp-phone" required placeholder="08xxxxxxxxxx">
+                    </div>
+                    <div class="form-group">
+                        <label for="rsvp-count">Jumlah Tamu</label>
+                        <input type="number" id="rsvp-count" value="1" min="1" max="5" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="rsvp-attendance">Konfirmasi Kehadiran</label>
+                        <select id="rsvp-attendance" required>
+                            <option value="Hadir">Hadir</option>
+                            <option value="Tidak Hadir">Tidak Hadir</option>
+                            <option value="Masih Ragu">Masih Ragu</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="rsvp-message">Ucapan / Doa</label>
+                        <textarea id="rsvp-message" rows="4" placeholder="Tulis ucapan atau doa..."></textarea>
+                    </div>
+                    <button type="submit" id="rsvp-submit-btn" class="btn-primary w-100">Kirim Konfirmasi</button>
+                    <p id="rsvp-status" class="rsvp-status"></p>
+                </form>
+            </div>
+        </section>
+
+        <!-- 10. WISHES -->
+        <section id="wishes" class="section wishes-section">
+            <div class="container">
+                <div class="section-title fade-up">
+                    <p class="subtitle">Ucapan & Doa</p>
+                    <h2>Wishes</h2>
+                </div>
+                <div id="wishes-container" class="wishes-container fade-up">
+                    <!-- Render via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. DIGITAL GIFT -->
+        <section id="gift" class="section gift-section">
+            <div class="container text-center">
+                <div class="section-title fade-up">
+                    <p class="subtitle">Tanda Kasih</p>
+                    <h2>Wedding Gift</h2>
+                    <p class="gift-desc">Doa dan kehadiran Anda merupakan hadiah terindah bagi kami. Namun bagi yang ingin memberikan tanda kasih, dapat melalui:</p>
+                </div>
+
+                <div class="gift-cards-wrapper">
+                    <!-- Bank 1 -->
+                    <div class="gift-card fade-up">
+                        <h3 id="gift-bank">BCA</h3>
+                        <p class="account-number" id="gift-account">1234567890</p>
+                        <p class="account-name" id="gift-account-name">A.n Aditya Pratama</p>
+                        <button class="btn-secondary copy-btn" data-clipboard="1234567890">
+                            <i class="fa-regular fa-copy"></i> Copy Rekening
+                        </button>
+                    </div>
+
+                    <!-- Bank 2 -->
+                    <div class="gift-card fade-up" id="bank-2-wrapper">
+                        <h3 id="gift-bank-2">Mandiri</h3>
+                        <p class="account-number" id="gift-account-2">0987654321</p>
+                        <p class="account-name" id="gift-account-name-2">A.n Alya Maharani</p>
+                        <button class="btn-secondary copy-btn" data-clipboard="0987654321">
+                            <i class="fa-regular fa-copy"></i> Copy Rekening
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gift-address-box fade-up mt-4">
+                    <h3>Kirim Kado Fisik</h3>
+                    <p id="gift-address">Jl. Mawar Indah No. 45, RT 02/RW 05, Kebayoran Baru, Jakarta Selatan</p>
+                </div>
+
+                <!-- Toast Notification -->
+                <div id="toast" class="toast">Nomor rekening berhasil disalin.</div>
+            </div>
+        </section>
+
+        <!-- 12. CLOSING -->
+        <section id="closing" class="section closing-section text-center">
+            <div class="container fade-up">
+                <div class="closing-photo">
+                    <img src="assets/images/cover.jpg" alt="Couple" loading="lazy">
+                </div>
+                <p class="closing-text">
+                    Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
+                </p>
+                <h2 class="couple-names-closing"><span class="groom-name">Aditya</span> & <span class="bride-name">Alya</span></h2>
+                <p class="thank-you">Thank You</p>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Script Configuration & Main Logic -->
+    <script src="js/config.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
