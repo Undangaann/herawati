@@ -90,7 +90,7 @@ const WEDDING_CONFIG = {
 
     rsvp: {
         // Kosongkan jika belum memiliki Google Apps Script API endpoint
-        apiUrl: ""
+        apiUrl: "https://script.google.com/macros/s/AKfycbxa3TbQPdksQbazQBb7tAyGMq6BhMzIFfiqRi6upUCDR184YQVbQO4Xkfs58teYJKh0oA/exec"
     },
 
     social: {
