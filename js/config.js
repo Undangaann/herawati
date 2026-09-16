@@ -1,67 +1,68 @@
 const WEDDING_CONFIG = {
     couple: {
         groom: {
-            name: "Aditya Pratama",
+            name: "Andi Agung Pratama Putra",
             nickname: "Adit",
-            father: "Bapak Pratama",
-            mother: "Ibu Pratama",
+            father: "Bapak Andi Muhtar",
+            mother: "Ibu Jamila",
             instagram: "https://instagram.com",
             instagramUsername: "@adityapratama",
             photo: "assets/images/groom.jpg"
         },
         bride: {
-            name: "Alya Maharani",
-            nickname: "Alya",
-            father: "Bapak Maharani",
-            mother: "Ibu Maharani",
+            name: "Herawati Haeruddin",
+            nickname: "Hera",
+            father: "Bapak H. Haeruddin",
+            mother: "Ibu Hj. Indah",
             instagram: "https://instagram.com",
-            instagramUsername: "@alyamaharani",
+            instagramUsername: "@heiirawt_",
             photo: "assets/images/bride.jpg"
         }
     },
 
     event: {
         akad: {
-            date: "12 Desember 2026",
-            startTime: "08:00",
-            endTime: "10:00",
-            venue: "Gedung Pernikahan Harmoni",
-            address: "Jl. Melati No. 123, Kota Jakarta",
+            date: "24 September 2026",
+            startTime: "11:00",
+            endTime: "12:00",
+            venue: "Rumah Keluarga Herawati",
+            address: "Jl. Bone 10 Blok J no 310",
             mapsUrl: "https://goo.gl/maps/example"
         },
         reception: {
-            date: "12 Desember 2026",
-            startTime: "11:00",
-            endTime: "13:00",
-            venue: "Gedung Pernikahan Harmoni",
-            address: "Jl. Melati No. 123, Kota Jakarta",
+            date: "24 September 2026",
+            startTime: "12:00",
+            endTime: "17:00",
+            venue: "Rumah Keluarga Herawati",
+            address: "Jl. Bone 10 Blok J no 310",
             mapsUrl: "https://goo.gl/maps/example"
         }
     },
 
     // Format: YYYY-MM-DDTHH:MM:SS
-    countdownDate: "2026-12-12T08:00:00",
+    countdownDate: "2026-09-24T11:00:00",
 
     story: [
         {
-            year: "2019",
+            year: "2025",
             title: "First Meet",
-            description: "Kami pertama kali bertemu di sebuah acara seminar kampus di Jakarta."
+            description: "Tidak ada yang kebetulan di dunia ini, semua sudah tersusun dengan rapi oleh sang maha kuasa, kita tidak bisa memilih kepada siapa kita akan jatuh cinta. Kami bertemu pertama kalinya tanpa sengaja pada tanggal 14 Juni 2025"
         },
         {
-            year: "2021",
+            year: "2025",
             title: "First Date",
-            description: "Menjalani komitmen dan memutuskan untuk saling mengenal lebih dekat."
+            description: "Katanya cinta dapat tumbuh dengan kebersamaan, seiring berjalannya waktu kami semakin dekat, memang tidak ada kata pacaran tapi tuhan mentakdirkan kita untuk bersama."
         },
         {
-            year: "2024",
+            year: "2026",
             title: "Engagement",
-            description: "Melangkah ke jenjang yang lebih serius dengan melangsungkan pertunangan."
+            description: "Kehendaknya menuntun kami pada sebuah pertemuan yang tak pernah disangka hingga akhirnya pada tanggal 13 September 2026 membawa kami pada sebuah ikatan yang di Ridhoi-nya"
         },
         {
             year: "2026",
             title: "The Wedding",
-            description: "Hari bahagia di mana kami menyatukan janji suci pernikahan."
+            description: "ukan karena bertemu lalu berjodoh, tapi karna berjodohlah kami bisa bertemu kami memutuskan untuk mengikrarkan janji suci pernikahan pada 24 September 2026.
+Sebagaimana yang pernah dikatakan oleh ali bin abi Thalib : apa yang menjadi takdirmu akan menemukan jalannya untuk menemukanmu."
         }
     ],
 
@@ -76,16 +77,16 @@ const WEDDING_CONFIG = {
 
     gift: {
         bank: "BCA",
-        accountNumber: "1234567890",
-        accountName: "Aditya Pratama",
+        accountNumber: "7991205920",
+        accountName: "Herawati Haeruddin",
 
         bank2: {
-            bank: "Mandiri",
-            accountNumber: "0987654321",
-            accountName: "Alya Maharani"
+            bank: "BRI",
+            accountNumber: "3818 0102 3768 536",
+            accountName: "Andi agung pratama putra"
         },
 
-        giftAddress: "Jl. Mawar Indah No. 45, RT 02/RW 05, Kebayoran Baru, Jakarta Selatan"
+        giftAddress: "Jl Bone 10 Blok j no 310"
     },
 
     rsvp: {
