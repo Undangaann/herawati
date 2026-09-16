@@ -122,13 +122,23 @@ ul {
     left: 0;
     z-index: 9999;
     display: flex;
-    flex-direction: column;           /* Mengubah arah susunan menjadi ke bawah */
-    justify-content: flex-end;        /* Memindahkan posisi teks ke bawah layar */
+    flex-direction: column;
+    justify-content: center; /* Dikembalikan ke center agar seimbang */
     align-items: center;
     text-align: center;
     color: var(--white);
-    padding: 30px 20px 50px 20px;     /* Mengatur jarak aman dari bawah (bottom padding) */
+    padding: 20px;
     transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+/* Tambahkan styling khusus untuk pembungkus konten di dalam cover */
+.cover-content {
+    margin-top: 150px; /* Mendorong seluruh teks dan tombol turun ke area dada/perut pengantin, pas di bawah wajah */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
 }
 
 .cover-bg {
