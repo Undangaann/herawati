@@ -25,6 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 9. Scroll Animation (Intersection Observer)
     initScrollAnimations();
+
+    // 10. Load Ucapan dari Google Sheets (menggantikan renderSampleWishes statis)
+    loadWishes();
 });
 
 // --- Inisialisasi Konfigurasi ---
@@ -46,7 +49,6 @@ function initConfiguration() {
     document.getElementById("bride-ig").innerHTML = `<i class="fa-brands fa-instagram"></i> ${WEDDING_CONFIG.couple.bride.instagramUsername}`;
 
     // Photos
-    //document.querySelector(".cover-bg").style.backgroundImage = `url('${WEDDING_CONFIG.couple.groom.photo}')`; // atau cover foto
     document.querySelectorAll(".closing-photo img")[0].src = WEDDING_CONFIG.couple.groom.photo;
 
     // Event Akad & Resepsi
@@ -82,9 +84,6 @@ function initConfiguration() {
     }
 
     document.getElementById("gift-address").textContent = WEDDING_CONFIG.gift.giftAddress;
-
-    // Render Sample Wishes
-    renderSampleWishes();
 }
 
 // --- Personalisasi Nama Tamu ---
@@ -243,6 +242,8 @@ function initRSVP() {
     const statusEl = document.getElementById("rsvp-status");
     const submitBtn = document.getElementById("rsvp-submit-btn");
 
+    if (!form) return;
+
     form.addEventListener("submit", (e) => {
         e.preventDefault();
         const apiUrl = WEDDING_CONFIG.rsvp.apiUrl;
@@ -275,6 +276,8 @@ function initRSVP() {
             statusEl.style.color = "green";
             statusEl.textContent = "Terima kasih atas konfirmasi kehadiran Anda.";
             form.reset();
+            // Reload ucapan agar data terbaru langsung tampil (jika API mendukung GET)
+            loadWishes();
         })
         .catch(error => {
             statusEl.style.color = "#d9534f";
@@ -286,25 +289,6 @@ function initRSVP() {
             submitBtn.textContent = "Kirim Konfirmasi";
         });
     });
-}
-
-// --- Wishes Sample & Render ---
-function renderSampleWishes() {
-    const container = document.getElementById("wishes-container");
-    const sampleWishes = [
-        { name: "Budi Santoso", date: "10 Des 2026", message: "Selamat menempuh hidup baru, Adit & Alya! Semoga menjadi keluarga sakinah, mawaddah, warahmah." },
-        { name: "Siti Rahma", date: "11 Des 2026", message: "Barakallah fii kum! Bahagia selalu hingga akhir masa." }
-    ];
-
-    container.innerHTML = sampleWishes.map(wish => `
-        <div class="wish-card">
-            <div class="wish-header">
-                <span class="wish-name">${wish.name}</span>
-                <span class="wish-date">${wish.date}</span>
-            </div>
-            <p class="wish-text">${wish.message}</p>
-        </div>
-    `).join('');
 }
 
 // --- Copy Gift Handler ---
@@ -341,4 +325,58 @@ function initScrollAnimations() {
     }, { threshold: 0.1 });
 
     elements.forEach(el => observer.observe(el));
+}
+
+// --- Memuat Ucapan dari Google Sheets ---
+function loadWishes() {
+    const container = document.getElementById('wishes-container');
+    if (!container) return;
+
+    if (typeof WEDDING_CONFIG === 'undefined' || !WEDDING_CONFIG.rsvp || !WEDDING_CONFIG.rsvp.apiUrl) {
+        return;
+    }
+
+    fetch(WEDDING_CONFIG.rsvp.apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            container.innerHTML = ""; 
+            
+            // Urutkan dari yang paling baru di atas
+            data.reverse();
+
+            if (data.length === 0) {
+                container.innerHTML = '<p class="text-center text-muted">Belum ada ucapan. Jadilah yang pertama memberikan ucapan!</p>';
+                return;
+            }
+
+            data.forEach(wish => {
+                let badgeClass = wish.attendance === 'Hadir' ? 'bg-success' : 'bg-danger';
+                
+                let wishCard = `
+                    <div class="wish-item p-3 mb-3 border rounded shadow-sm bg-white">
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <h6 class="mb-0 fw-bold">${escapeHtml(wish.name)}</h6>
+                            <span class="badge ${badgeClass} text-white" style="font-size: 0.7rem;">${escapeHtml(wish.attendance)}</span>
+                        </div>
+                        <p class="mb-1 text-muted" style="font-size: 0.9rem;">${escapeHtml(wish.message)}</p>
+                        <small class="text-secondary" style="font-size: 0.75rem;">${new Date(wish.timestamp).toLocaleDateString('id-ID', { dateStyle: 'medium' })}, ${new Date(wish.timestamp).toLocaleTimeString('id-ID', { timeStyle: 'short' }) === 'Invalid Date' ? '' : new Date(wish.timestamp).toLocaleTimeString('id-ID', { timeStyle: 'short' })}</small>
+                    </div>
+                `;
+                container.innerHTML += wishCard;
+            });
+        })
+        .catch(error => {
+            console.error("Gagal memuat ucapan:", error);
+        });
+}
+
+// --- Fungsi Keamanan Escape HTML ---
+function escapeHtml(text) {
+    if (!text) return '';
+    return text.toString()
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
 }
