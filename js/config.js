@@ -61,9 +61,8 @@ const WEDDING_CONFIG = {
         {
             year: "2026",
             title: "The Wedding",
-            description: "ukan karena bertemu lalu berjodoh, tapi karna berjodohlah kami bisa bertemu kami memutuskan untuk mengikrarkan janji suci pernikahan pada 24 September 2026.
-Sebagaimana yang pernah dikatakan oleh ali bin abi Thalib : apa yang menjadi takdirmu akan menemukan jalannya untuk menemukanmu."
-        }
+            description: "Bukan karena bertemu lalu berjodoh, tapi karna berjodohlah kami bisa bertemu kami memutuskan untuk mengikrarkan janji suci pernikahan pada 24 September 2026. Sebagaimana yang pernah dikatakan oleh ali bin abi Thalib : apa yang menjadi takdirmu akan menemukan jalannya untuk menemukanmu."
+        },
     ],
 
     gallery: [
