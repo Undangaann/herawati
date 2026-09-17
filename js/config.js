@@ -26,7 +26,7 @@ const WEDDING_CONFIG = {
             startTime: "11:00",
             endTime: "12:00",
             venue: "Kediaman Keluarga Herawati",
-            address: "Jl. Bone 10 Blok J no 310",
+            address: "Perumnas Sudiang Jl. Bone 10 Blok J no 310, Kec. Biringkanaya, Kel. Laikang, Kota Makassar",
             mapsUrl: "https://maps.app.goo.gl/kVNNH2MvFjLqusVk8"
         },
         reception: {
@@ -34,7 +34,7 @@ const WEDDING_CONFIG = {
             startTime: "12:00",
             endTime: "17:00",
             venue: "Kediaman Keluarga Herawati",
-            address: "Jl. Bone 10 Blok J no 310",
+            address: "Perumnas Sudiang Jl. Bone 10 Blok J no 310, Kec. Biringkanaya, Kel. Laikang, Kota Makassar",
             mapsUrl: "https://maps.app.goo.gl/kVNNH2MvFjLqusVk8"
         }
     },
