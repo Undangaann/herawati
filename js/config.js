@@ -25,17 +25,17 @@ const WEDDING_CONFIG = {
             date: "24 September 2026",
             startTime: "11:00",
             endTime: "12:00",
-            venue: "Rumah Keluarga Herawati",
+            venue: "Kediaman Keluarga Herawati",
             address: "Jl. Bone 10 Blok J no 310",
-            mapsUrl: "https://goo.gl/maps/example"
+            mapsUrl: "https://maps.app.goo.gl/kVNNH2MvFjLqusVk8"
         },
         reception: {
             date: "24 September 2026",
             startTime: "12:00",
             endTime: "17:00",
-            venue: "Rumah Keluarga Herawati",
+            venue: "Kediaman Keluarga Herawati",
             address: "Jl. Bone 10 Blok J no 310",
-            mapsUrl: "https://goo.gl/maps/example"
+            mapsUrl: "https://maps.app.goo.gl/kVNNH2MvFjLqusVk8"
         }
     },
 
