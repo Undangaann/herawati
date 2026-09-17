@@ -69,7 +69,8 @@ const WEDDING_CONFIG = {
         "assets/images/gallery-1.jpg",
         "assets/images/gallery-2.jpg",
         "assets/images/gallery-3.jpg",
-        "assets/images/gallery-4.jpg"
+        "assets/images/gallery-4.jpg",
+        "assets/images/cover-1.jpg"
     ],
 
     music: "assets/music/music.mp3",
