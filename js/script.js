@@ -66,7 +66,7 @@ function initConfiguration() {
 
     // Location Maps Embed
     document.getElementById("main-maps-btn").href = WEDDING_CONFIG.event.reception.mapsUrl;
-    document.getElementById("map-iframe").src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.81956135045434!3d-6.194741395493371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f43f988cad1f%3A0x6b2e3f890731df46!2sMonumen%20Nasional!5e0!3m2!1sid!2sid!4v1620000000000!5m2!1sid!2sid";
+    document.getElementById("map-iframe").src = "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3973.9607470285155!2d119.53470997498192!3d-5.110029194867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNcKwMDYnMzYuMSJTIDExOcKwMzInMTQuMiJF!5e0!3m2!1sid!2sid!4v1789606260810!5m2!1sid!2sid";
 
     // Gift
     document.getElementById("gift-bank").textContent = WEDDING_CONFIG.gift.bank;
