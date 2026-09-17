@@ -49,7 +49,7 @@ function initConfiguration() {
     document.getElementById("bride-ig").innerHTML = `<i class="fa-brands fa-instagram"></i> ${WEDDING_CONFIG.couple.bride.instagramUsername}`;
 
     // Photos
-    document.querySelectorAll(".closing-photo img")[0].src = WEDDING_CONFIG.couple.groom.photo;
+    document.querySelectorAll(".closing-photo img")[0].src = WEDDING_CONFIG.gallery[WEDDING_CONFIG.gallery.length - 1];
 
     // Event Akad & Resepsi
     document.getElementById("akad-date").textContent = WEDDING_CONFIG.event.akad.date;
