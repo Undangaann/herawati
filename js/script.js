@@ -39,8 +39,8 @@ function initConfiguration() {
     document.querySelector(".groom-full-name").textContent = WEDDING_CONFIG.couple.groom.name;
     document.querySelector(".bride-full-name").textContent = WEDDING_CONFIG.couple.bride.name;
 
-    document.querySelectorAll(".parent-info")[0].innerHTML = `Putra dari<br>${WEDDING_CONFIG.couple.groom.father} & ${WEDDING_CONFIG.couple.groom.mother}`;
-    document.querySelectorAll(".parent-info")[1].innerHTML = `Putri dari<br>${WEDDING_CONFIG.couple.bride.father} & ${WEDDING_CONFIG.couple.bride.mother}`;
+    //document.querySelectorAll(".parent-info")[0].innerHTML = `Putra dari<br>${WEDDING_CONFIG.couple.groom.father} & ${WEDDING_CONFIG.couple.groom.mother}`;
+    //document.querySelectorAll(".parent-info")[1].innerHTML = `Putri dari<br>${WEDDING_CONFIG.couple.bride.father} & ${WEDDING_CONFIG.couple.bride.mother}`;
 
     document.getElementById("groom-ig").href = WEDDING_CONFIG.couple.groom.instagram;
     document.getElementById("groom-ig").innerHTML = `<i class="fa-brands fa-instagram"></i> ${WEDDING_CONFIG.couple.groom.instagramUsername}`;
