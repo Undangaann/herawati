@@ -170,9 +170,10 @@ ul {
 }
 
 .cover-content h1 {
-    font-size: 3.5rem;
+    font-size: clamp(1.8rem, 7vw, 3.5rem); /* Ukuran menyesuaikan otomatis secara responsif */
     font-weight: 700;
     margin-bottom: 10px;
+    white-space: nowrap; /* Memastikan teks nama pasangan tidak terpotong dan tetap dalam 1 baris */
 }
 
 .wedding-date {
