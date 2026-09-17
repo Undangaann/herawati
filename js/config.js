@@ -46,7 +46,7 @@ const WEDDING_CONFIG = {
             venue: "Kediaman Mempelai Pria",
             address: "Jln. Goa Ria RT/003, RW/014, Kel. Pai, Kec. Biringkanaya",
             mapsUrl: "https://maps.app.goo.gl/AcYPu3XMBEo5x3hLA"
-        }
+        },
     },
 
     // Format: YYYY-MM-DDTHH:MM:SS
