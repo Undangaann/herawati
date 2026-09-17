@@ -51,18 +51,26 @@ function initConfiguration() {
     // Photos
     document.querySelectorAll(".closing-photo img")[0].src = WEDDING_CONFIG.gallery[WEDDING_CONFIG.gallery.length - 1];
 
-    // Event Akad & Resepsi
+    // Event Akad, Resepsi 1 & Resepsi 2
     document.getElementById("akad-date").textContent = WEDDING_CONFIG.event.akad.date;
     document.getElementById("akad-time").textContent = `${WEDDING_CONFIG.event.akad.startTime} - ${WEDDING_CONFIG.event.akad.endTime} WIB`;
     document.getElementById("akad-venue").textContent = WEDDING_CONFIG.event.akad.venue;
     document.getElementById("akad-address").textContent = WEDDING_CONFIG.event.akad.address;
     document.getElementById("akad-maps").href = WEDDING_CONFIG.event.akad.mapsUrl;
 
+    document.getElementById("reception-title").textContent = WEDDING_CONFIG.event.reception.title;
     document.getElementById("reception-date").textContent = WEDDING_CONFIG.event.reception.date;
     document.getElementById("reception-time").textContent = `${WEDDING_CONFIG.event.reception.startTime} - ${WEDDING_CONFIG.event.reception.endTime} WIB`;
     document.getElementById("reception-venue").textContent = WEDDING_CONFIG.event.reception.venue;
     document.getElementById("reception-address").textContent = WEDDING_CONFIG.event.reception.address;
     document.getElementById("reception-maps").href = WEDDING_CONFIG.event.reception.mapsUrl;
+
+    document.getElementById("reception2-title").textContent = WEDDING_CONFIG.event.reception2.title;
+    document.getElementById("reception2-date").textContent = WEDDING_CONFIG.event.reception2.date;
+    document.getElementById("reception2-time").textContent = `${WEDDING_CONFIG.event.reception2.startTime} - ${WEDDING_CONFIG.event.reception2.endTime}`;
+    document.getElementById("reception2-venue").textContent = WEDDING_CONFIG.event.reception2.venue;
+    document.getElementById("reception2-address").textContent = WEDDING_CONFIG.event.reception2.address;
+    document.getElementById("reception2-maps").href = WEDDING_CONFIG.event.reception2.mapsUrl;
 
     // Location Maps Embed
     document.getElementById("main-maps-btn").href = WEDDING_CONFIG.event.reception.mapsUrl;
