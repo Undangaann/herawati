@@ -30,12 +30,22 @@ const WEDDING_CONFIG = {
             mapsUrl: "https://maps.app.goo.gl/kVNNH2MvFjLqusVk8"
         },
         reception: {
+            title: "RESEPSI 1 (Rumah Mempelai Wanita)",
             date: "24 September 2026",
             startTime: "12:00",
-            endTime: "17:00",
+            endTime: "Selesai",
             venue: "Kediaman Keluarga Herawati",
             address: "Perumnas Sudiang Jl. Bone 10 Blok J no 310, Kec. Biringkanaya, Kel. Laikang, Kota Makassar",
             mapsUrl: "https://maps.app.goo.gl/kVNNH2MvFjLqusVk8"
+        },
+        reception2: {
+            title: "RESEPSI 2 (Rumah Mempelai Pria)",
+            date: "24 September 2026",
+            startTime: "17:00",
+            endTime: "Selesai",
+            venue: "Kediaman Mempelai Pria",
+            address: "Jln. Goa Ria RT/003, RW/014, Kel. Pai, Kec. Biringkanaya",
+            mapsUrl: "https://maps.app.goo.gl/AcYPu3XMBEo5x3hLA"
         }
     },
 
